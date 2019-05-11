@@ -1029,7 +1029,7 @@ def validate_flags_or_throw(bert_config):
         "(%d) + 3" % (MAX_SEQ_LENGTH, MAX_QUERY_LENGTH))
 
 
-def main(_):
+def run_squad():
   tf.logging.set_verbosity(tf.logging.INFO)
 
   bert_config = modeling.BertConfig.from_json_file(BERT_CONFIG_FILE)
@@ -1182,5 +1182,3 @@ def main(_):
                       output_nbest_file, output_null_log_odds_file)
 
 
-if __name__ == "__main__":
-  tf.app.run()
